@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pip install pandas numpy matplotlib seaborn sklearn statsmodels 

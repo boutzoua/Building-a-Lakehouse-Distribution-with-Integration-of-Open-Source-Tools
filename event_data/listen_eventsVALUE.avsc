@@ -1,0 +1,96 @@
+{
+  "type": "record",
+  "name": "ListenEventValue",
+  "namespace": "eventM.com",
+  "fields": [
+    {
+      "name": "artist",
+      "type": "string"
+    },
+    {
+      "name": "song",
+      "type": "string"
+    },
+    {
+      "name": "duration",
+      "type": "string"
+    },
+    {
+      "name": "ts",
+      "type": "int"
+    },
+    {
+      "name": "sessionid",
+      "type": "string"
+    },
+    {
+      "name": "auth",
+      "type": "string"
+    },
+    {
+      "name": "level",
+      "type": "string"
+    },
+    {
+      "name": "itemInSession",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "zip",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "state",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "country",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "userAgent",
+      "type": "string"
+    },
+    {
+      "name": "lon",
+      "type": "string"
+    },
+    {
+      "name": "lat",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "lastName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "firstName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "gender",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "registration",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

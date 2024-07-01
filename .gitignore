@@ -1,0 +1,13 @@
+.vscode/
+.idea/
+.env
+dbt_env/
+env_dremio/
+dbt_dremio/
+dbt_dremio_project/
+logs/
+airflow/logs/
+node_modules
+**/node_modules
+dbt_trino_lh/   
+dbt_trino/

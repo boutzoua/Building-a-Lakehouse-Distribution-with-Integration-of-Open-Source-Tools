@@ -1,0 +1,15 @@
+{
+    "name": "cdc-pg-connector",  
+    "config": {
+      "connector.class": "io.debezium.connector.postgresql.PostgresConnector", 
+      "plugin.name": "pgoutput",
+      "database.hostname": "keycloak_db", 
+      "database.port": "5432", 
+      "database.user": "postgres", 
+      "database.password": "postgres", 
+      "database.dbname" : "postgres",
+      "decimal.handling.mode": "string",
+      "topic.prefix": "changeDC", 
+      "table.include.list": "public.sp_stock"
+    }
+  }

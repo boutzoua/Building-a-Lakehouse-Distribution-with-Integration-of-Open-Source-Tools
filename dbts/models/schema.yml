@@ -1,0 +1,126 @@
+version: 2
+
+models:
+  - name: src_sp500_companies
+    description: "Table containing information about S&P 500 companies."
+    
+    columns:
+      - name: Exchange
+        description: "The stock exchange where the company is listed."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['NMS', 'NYSE', 'AMEX']
+
+      - name: Symbol  
+        description: "Stock symbol of the company."
+        tests:
+          - not_null
+
+      - name: Shortname
+        description: "Short name of the company."
+        tests:
+          - not_null
+          - unique
+
+      - name: Sector
+        description: "The sector the company belongs to."
+        tests:
+          - not_null
+
+      - name: Industry
+        description: "The industry the company operates in."
+        tests:
+          - not_null
+
+      - name: Currentprice
+        description: "Current stock price of the company."
+        tests:
+          - not_null
+
+      - name: Marketcap
+        description: "Market capitalization of the company."
+        tests:
+          - not_null
+
+      - name: Ebitda
+        description: "Earnings before interest, taxes, depreciation, and amortization."
+        tests:
+          - not_null
+
+      - name: Revenuegrowth
+        description: "Revenue growth percentage."
+        tests:
+          - not_null
+
+      - name: City
+        description: "City where the company is headquartered."
+
+      - name: State
+        description: "State where the company is headquartered."
+
+      - name: Country
+        description: "Country where the company is headquartered."
+
+      - name: Fulltimeemployees
+        description: "Number of full-time employees."
+        tests:
+          - not_null
+      - name: Weight
+        description: "Weight of the company in the S&P 500 index."
+        tests:
+          - not_null
+  - name: src_sp500_index
+    description: "Table containing historical values of the S&P 500 index."
+    
+    columns:
+      - name: Date
+        description: "Date of the record."
+        tests:
+          - not_null
+          - unique
+
+      - name: S&P500
+        description: "S&P 500 index value on the given date."
+        tests:
+          - not_null
+
+  - name: src_sp500_stock
+    description: "Table containing historical stock data for companies in the S&P 500 index."
+    
+    columns:
+      - name: Date
+        description: "Date of the stock record."
+        tests:
+          - not_null
+          - unique
+
+      - name: Adj_Close
+        description: "Adjusted close price of the stock."
+        tests:
+          - not_null
+
+      - name: Close
+        description: "Closing price of the stock."
+        tests:
+          - not_null
+
+      - name: High
+        description: "Highest price of the stock during the day."
+        tests:
+          - not_null
+
+      - name: Low
+        description: "Lowest price of the stock during the day."
+        tests:
+          - not_null
+
+      - name: Open
+        description: "Opening price of the stock."
+        tests:
+          - not_null
+
+      - name: Volume
+        description: "Number of shares traded during the day."
+        tests:
+          - not_null

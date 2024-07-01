@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: oltp
+    database: postgres
+    schema: public
+    tables:
+      - name: sp500_companies
+      - name: sp500_index
+      - name: sp500_stock

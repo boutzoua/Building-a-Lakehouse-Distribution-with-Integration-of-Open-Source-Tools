@@ -1,0 +1,81 @@
+{
+  "type": "record",
+  "name": "AuthEventValue",
+  "namespace": "enventM.com",
+  "fields": [
+    {
+      "name": "ts",
+      "type": "int"
+    },
+    {
+      "name": "sessionId",
+      "type": "string"
+    },
+    {
+      "name": "level",
+      "type": "string"
+    },
+    {
+      "name": "itemInSession",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "zip",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "state",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "userAgent",
+      "type": "string"
+    },
+    {
+      "name": "lon",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "lat",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "userId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "lastName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "firstName",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "gender",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "registration",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "success",
+      "type": "boolean"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "iceberg-sink-connector",
+    "config":{
+      "connector.class": "io.tabular.iceberg.connect.IcebergSinkConnector",
+      "tasks.max": "2",
+      "topics": "changeDC.public.sp_stock",
+      "iceberg.tables.dynamic-enabled": "true",
+      "iceberg.tables.route-field": "source.table",
+      "iceberg.tables.auto-create-enabled": "true",
+      "iceberg.tables.primary-key-fields": "id",
+      "value.converter": "io.confluent.connect.avro.AvroConverter",
+      "value.converter.schema.registry.url": "http://schema-registry:8081",
+      "key.converter": "io.confluent.connect.avro.AvroConverter",
+      "key.converter.schema.registry.url": "http://schema-registry:8081",
+      "iceberg.catalog.catalog-impl": "org.apache.iceberg.nessie.NessieCatalog",
+      "iceberg.catalog.uri": "http://nessie:19120/api/v1",
+      "iceberg.catalog.ref": "main",
+      "iceberg.catalog.authentication.type": "BEARER",
+      "iceberg.catalog.authentication.token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIyOXRJeG8yR0czZzVBRGRsa21uZ2d4MGgwTjNZNVhkY3d3MXdHNHJoN21jIn0.eyJleHAiOjE3MTkyNzMwODksImlhdCI6MTcxOTIzNzA5MCwianRpIjoiNGExYzk5OTEtZGY5OS00Njk0LWJmNDUtODg0ZjMyNWYwODllIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL25lbW8iLCJhdWQiOlsiYWlyZmxvdyIsImFjY291bnQiXSwic3ViIjoiNmIxYmIzZWEtOTNjNy00Zjc2LTg3MDctNmE0NTAzNGZmNGFkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibmVzc2llIiwic2Vzc2lvbl9zdGF0ZSI6ImViZTRjMjA5LTBjOTktNDMzNS05OTBiLWZhZDlmZWQxYmJmZiIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmVtbyJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFpcmZsb3ciOnsicm9sZXMiOlsiYWlyZmxvd19hZG1pbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6ImViZTRjMjA5LTBjOTktNDMzNS05OTBiLWZhZDlmZWQxYmJmZiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Im11c3RhcGhhIGJvdXR6b3VhIiwicHJlZmVycmVkX3VzZXJuYW1lIjoibXVzdGFwaGEiLCJnaXZlbl9uYW1lIjoibXVzdGFwaGEiLCJmYW1pbHlfbmFtZSI6ImJvdXR6b3VhIiwiZW1haWwiOiJtdXN0YXBoYUBnbWFpbC5jb20ifQ.k7fDqDi4qcrLZcO2aT4-JydRfvOH0b0KjVzHFnXP2iceYb1FWrqeLDj6KUkLf6sqh4Fr-7VfsOT03MyhuxXqnwlqtelCUl3fH8pftsLzAjUmtp6w-_K4zGKxkMIFR96m8PVxGPQYXEdFgTG9KYeLG48WMBppHB6NLXJ5HmcoacyW_qM7fWlPXi2ruNk3lxZoIa7wDJ-8lhPDFuMG8SuOfXGDscX4U3D25TPItBFSMjqp3I6DhhmVd5lAvvM2lWJ_YI7U8pCYnHiWTbgGI1oKn_erMj-sKebwJCI4NSYMMJg-Axl4RnERzUXqfnfiXCZ1uW_zEZ02g55rH02hndLz9w",
+      "iceberg.catalog.warehouse": "s3a://datalake",
+      "iceberg.catalog.s3.endpoint":"http://minio:9000",
+      "iceberg.catalog.io-impl": "org.apache.iceberg.aws.s3.S3FileIO",
+      "iceberg.catalog.client.region": "us-east-1",
+      "iceberg.catalog.s3.path-style-access": "true"
+    }
+  }
