@@ -3,9 +3,7 @@ A data lakehouse is a data management architecture that combines key capabilitie
 
 ## Watch the Overview Video
 
-<a href="https://drive.google.com/file/d/1MUtFAFT788p2ewCjSE797EW6gYjnOsel/view?usp=sharing" target="_blank">
-  <img src="./assets/thumbnail_lakehouse.png" alt="Watch the video" style="width:50%;">
-</a>
+[![Watch the video](./assets/thumbnail_lakehouse.png )](https://drive.google.com/file/d/1MUtFAFT788p2ewCjSE797EW6gYjnOsel/view?usp=sharing)
 
 ## Lakehouse Architecture
 Data lakehouse architecture is an increasingly popular choice for many businesses because it supports interoperability between data lake formats. It supports ACID transactions and can run fast queries, typically through SQL commands, directly on object storage in the cloud or on-prem on structured and unstructured data.
